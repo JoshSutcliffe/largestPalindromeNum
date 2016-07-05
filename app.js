@@ -11,9 +11,6 @@ var checkNum2 =function(num) {
     if (string === reversed) {
       arr.push(parseInt(reversed));
     };
-    if (score === 99999) {
-      console.log(i, num);
-    }
   };
 };
 
@@ -21,7 +18,10 @@ var checkNum1 = function (num) {
   for (var i = 100; i < num; i++) {
     checkNum2(i);
   };
-  console.log(arr.sort());
+  function getMaxOfArray(numArray) {
+    console.log(Math.max.apply(null, numArray));
+  };
+  getMaxOfArray(arr);
 };
 
 checkNum1(999);
